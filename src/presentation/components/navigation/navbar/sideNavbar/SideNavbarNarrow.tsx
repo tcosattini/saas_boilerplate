@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { NavbarContext } from "../../../contexts/navigation/navbar/NavbarContext";
+import { NavbarContext } from "../../../../contexts/navigation/navbar/NavbarContext";
 
 export default function SideNavbarNarrow() {
   // TODO CHANGE THIS SHIT

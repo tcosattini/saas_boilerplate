@@ -1,7 +1,7 @@
 import { createContext } from "react";
 import { NavbarContext as NavbarContextInterface } from "../../shared/interface/NavbarContext.interface";
-import { navigationElementsExample } from "../../../components/navigation/navbar/data/navigationElements.example";
-import { useNavbar } from "../../../hooks/navigation/navbar/useNavabar";
+import { navigationElementsExample } from "../../../components/navigation/navbar/sideNavbar/data/navigationElements.example";
+import { useNavbar } from "../../../hooks/navigation/navbar/useNavbar";
 
 interface NavbarContextProviderProps {
   children: React.ReactNode;

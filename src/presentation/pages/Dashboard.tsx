@@ -1,4 +1,4 @@
-import SideNavbar from "../components/navigation/navbar/SideNavbar";
+import SideNavbar from "../components/navigation/navbar/sideNavbar/SideNavbar";
 
 export const Dashboard = () => {
   return (

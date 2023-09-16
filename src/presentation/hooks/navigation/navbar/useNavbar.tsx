@@ -1,9 +1,9 @@
 import { useState } from "react";
-import SideNavbarNarrow from "../../../components/navigation/navbar/SideNavbarNarrow";
-import SideNavbarSmall from "../../../components/navigation/navbar/SideNavbarSmall";
-import SideNavbarDesktop from "../../../components/navigation/navbar/SideNavbarDesktop";
+import SideNavbarNarrow from "../../../components/navigation/navbar/sideNavbar/SideNavbarNarrow";
+import SideNavbarSmall from "../../../components/navigation/navbar/sideNavbar/SideNavbarSmall";
+import SideNavbarDesktop from "../../../components/navigation/navbar/sideNavbar/SideNavbarDesktop";
 import { NavbarNavigationElement } from "../../../shared/interfaces/navigation/navbar.interface";
-import { navigationElementsExample } from "../../../components/navigation/navbar/data/navigationElements.example";
+import { navigationElementsExample } from "../../../components/navigation/navbar/sideNavbar/data/navigationElements.example";
 
 export function useNavbar() {
   const [navbarNavigationElements, setNavbarNavigationElements] = useState<

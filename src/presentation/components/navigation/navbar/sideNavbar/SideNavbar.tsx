@@ -1,13 +1,12 @@
 import { useEffect } from "react";
-import { useNavbar } from "../../../hooks/navigation/navbar/useNavabar";
+import { useNavbar } from "../../../../hooks/navigation/navbar/useNavbar";
+import { NavbarContextProvider } from "../../../../contexts/navigation/navbar/NavbarContext";
 
 //dependencies
 import { useWindowWidth } from "@react-hook/window-size";
-import { NavbarContextProvider } from "../../../contexts/navigation/navbar/NavbarContext";
 
 export default function SideNavbar() {
   const { navbarDependingWidth, displayedNavbar } = useNavbar();
-
   const width = useWindowWidth();
 
   useEffect(() => {

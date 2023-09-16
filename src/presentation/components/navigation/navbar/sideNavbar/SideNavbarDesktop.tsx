@@ -1,7 +1,6 @@
 import { useContext } from "react";
-import { useNavbar } from "../../../hooks/navigation/navbar/useNavabar";
-import { NavbarNavigationElement } from "../../../shared/interfaces/navigation/navbar.interface";
-import { NavbarContext } from "../../../contexts/navigation/navbar/NavbarContext";
+import { NavbarNavigationElement } from "../../../../shared/interfaces/navigation/navbar.interface";
+import { NavbarContext } from "../../../../contexts/navigation/navbar/NavbarContext";
 
 function classNames(...classes: any) {
   return classes.filter(Boolean).join(" ");

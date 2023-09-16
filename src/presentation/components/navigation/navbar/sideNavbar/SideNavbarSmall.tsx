@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import { useNavbar } from "../../../hooks/navigation/navbar/useNavabar";
+import { useNavbar } from "../../../../hooks/navigation/navbar/useNavbar";
 
 //Tailwind dependencies
 import { Dialog } from "@headlessui/react";
