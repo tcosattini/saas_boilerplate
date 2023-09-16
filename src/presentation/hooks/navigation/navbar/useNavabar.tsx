@@ -30,7 +30,6 @@ export function useNavbar() {
         current: element === navbarNavigationElement,
       })
     );
-    console.log("hook", updatedNavigationElements);
     return setNavbarNavigationElements(updatedNavigationElements);
   };
 
