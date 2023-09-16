@@ -1,6 +1,9 @@
-import { useContext } from "react";
+import { Fragment, useContext, useState } from "react";
 import { NavbarNavigationElement } from "../../../../shared/interfaces/navigation/navbar.interface";
 import { NavbarContext } from "../../../../contexts/navigation/navbar/NavbarContext";
+
+//Dependencies
+import { Transition } from "@headlessui/react";
 
 function classNames(...classes: any) {
   return classes.filter(Boolean).join(" ");
