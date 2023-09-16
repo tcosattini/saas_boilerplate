@@ -1,11 +1,10 @@
 import { Fragment, useContext, useState } from "react";
-import { useNavbar } from "../../../../hooks/navigation/navbar/useNavbar";
 import { BarsBottomButton } from "../../../button/BarsBottomButton";
+import { NavbarContext } from "../../../../contexts/navigation/navbar/NavbarContext";
 
 //Tailwind dependencies
 import { Dialog, Transition } from "@headlessui/react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
-import { NavbarContext } from "../../../../contexts/navigation/navbar/NavbarContext";
 
 export default function SideNavbarSmall() {
   const { setCurrentNavigationElement, navbarNavigationElements } =
