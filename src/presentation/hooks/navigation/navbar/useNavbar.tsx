@@ -16,9 +16,7 @@ export function useNavbar() {
 
   const displayNavbarDependingWidth = (width: number): void => {
     if (width <= 760) return setDisplayedNavbar(<SideNavbarSmall />);
-    if (width > 760 && width <= 1024)
-      return setDisplayedNavbar(<SideNavbarNarrow />);
-    else return setDisplayedNavbar(<SideNavbarDesktop />);
+    return setDisplayedNavbar(<SideNavbarDesktop />);
   };
 
   const setCurrentNavigationElement = (

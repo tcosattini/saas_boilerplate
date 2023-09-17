@@ -1,5 +1,5 @@
 import { Fragment, useContext, useState } from "react";
-import { BarsBottomButton } from "../../../button/BarsBottomButton";
+import { BarsBottomButton } from "../../../button/special-button/BarsBottomButton";
 import { NavbarContext } from "../../../../contexts/navigation/navbar/NavbarContext";
 
 //Tailwind dependencies
@@ -21,7 +21,7 @@ export default function SideNavbarSmall() {
       <Transition.Root show={sidebarOpen} as={Fragment}>
         <Dialog
           as="div"
-          className="relative z-40 md:hidden"
+          className="relative z-40"
           onClose={() => setSidebarOpen(false)}
         >
           <Transition.Child

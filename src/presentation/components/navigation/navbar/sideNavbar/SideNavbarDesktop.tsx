@@ -15,7 +15,7 @@ export default function SideNavbarDesktop() {
 
   return (
     <>
-      <div className="hidden md:fixed md:inset-y-0 md:flex md:w-64 md:flex-col">
+      <div className="fixed inset-y-0 flex w-64 flex-col">
         <div className="flex flex-grow flex-col overflow-y-auto bg-light-primary ">
           <a
             href="#"
