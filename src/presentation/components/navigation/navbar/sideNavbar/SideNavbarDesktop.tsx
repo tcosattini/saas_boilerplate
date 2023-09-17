@@ -13,7 +13,7 @@ export default function SideNavbarDesktop() {
 
   return (
     <>
-      <div className="fixed inset-y-0 flex w-64 flex-col">
+      <div className="inset-y-0 h-screen flex w-64 flex-col">
         <div className="flex flex-grow flex-col overflow-y-auto bg-light-primary ">
           <a
             href="#"
