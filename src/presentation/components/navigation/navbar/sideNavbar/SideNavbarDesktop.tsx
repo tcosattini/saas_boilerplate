@@ -17,7 +17,7 @@ export default function SideNavbarDesktop() {
         <div className="flex flex-grow flex-col overflow-y-auto bg-light-primary ">
           <a
             href="#"
-            className="flex h-24 w-20 items-center justify-center bg-light-primary focus:outline-none"
+            className="flex h-16 w-20 items-center justify-center bg-light-primary focus:outline-none"
           >
             <img
               className="h-8 w-auto"
