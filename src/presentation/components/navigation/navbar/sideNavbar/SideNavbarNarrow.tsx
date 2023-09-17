@@ -1,15 +1,16 @@
 import { useContext } from "react";
 import { NavbarContext } from "../../../../contexts/navigation/navbar/NavbarContext";
+import { ChevronDoubleRightButton } from "../../../button/special-button/ChevronDoubleRightButton";
 
 export default function SideNavbarNarrow() {
   // TODO CHANGE THIS SHIT
   function classNames(...classes: any) {
     return classes.filter(Boolean).join(" ");
   }
-  const { setCurrentNavigationElement, navbarNavigationElements } =
+  const { setCurrentNavigationElement, navbarNavigationElements, setIsNarrow } =
     useContext(NavbarContext);
   return (
-    <div className="absolute inset-y-0 left-0 md:static md:flex-shrink-0">
+    <div className="fixed inset-y-0 flex w-64 flex-col">
       <a
         href="#"
         className="flex h-24 w-20 items-center justify-center bg-light-primary focus:outline-none"
@@ -23,7 +24,7 @@ export default function SideNavbarNarrow() {
 
       <nav
         aria-label="Sidebar"
-        className="md:overflow-y-auto bg-light-primary h-[100vh] w-20"
+        className=" flex flex-col flex-grow bg-light-primary  w-20"
       >
         <div className="relative flex w-20 flex-col space-y-3 p-3">
           {navbarNavigationElements?.map((item) => (
@@ -42,6 +43,9 @@ export default function SideNavbarNarrow() {
               <item.icon className="h-6 w-6" aria-hidden="true" />
             </a>
           ))}
+        </div>
+        <div className="flex h-full pb-2  items-end justify-center">
+          <ChevronDoubleRightButton onClick={() => setIsNarrow(false)} />
         </div>
       </nav>
     </div>
