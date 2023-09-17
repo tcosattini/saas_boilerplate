@@ -1,16 +1,14 @@
-import { Fragment, useContext, useState } from "react";
+import { useContext } from "react";
 import { NavbarNavigationElement } from "../../../../shared/interfaces/navigation/navbar.interface";
 import { NavbarContext } from "../../../../contexts/navigation/navbar/NavbarContext";
-
-//Dependencies
-import { Transition } from "@headlessui/react";
+import { ChevronDoubleLeftButton } from "../../../button/special-button/ChevronDoubleLeftButton";
 
 function classNames(...classes: any) {
   return classes.filter(Boolean).join(" ");
 }
 
 export default function SideNavbarDesktop() {
-  const { setCurrentNavigationElement, navbarNavigationElements } =
+  const { setCurrentNavigationElement, navbarNavigationElements, setIsNarrow } =
     useContext(NavbarContext);
 
   return (
@@ -27,6 +25,7 @@ export default function SideNavbarDesktop() {
               alt="Your Company"
             />
           </a>
+
           <div className="mt-5 flex flex-1 flex-col">
             <nav className="flex-1 space-y-1 px-2 pb-4">
               {navbarNavigationElements?.map(
@@ -43,7 +42,7 @@ export default function SideNavbarDesktop() {
                     )}
                   >
                     <item.icon
-                      className="mr-3 h-6 w-6 flex-shrink-0 text-indigo-300"
+                      className="mr-3 h-6 w-6 flex-shrink-0 text-white"
                       aria-hidden="true"
                     />
                     {item.name}
@@ -51,6 +50,9 @@ export default function SideNavbarDesktop() {
                 )
               )}
             </nav>
+          </div>
+          <div className="flex flex-shrink-0 pb-2 justify-end">
+            <ChevronDoubleLeftButton onClick={() => setIsNarrow(true)} />
           </div>
         </div>
       </div>

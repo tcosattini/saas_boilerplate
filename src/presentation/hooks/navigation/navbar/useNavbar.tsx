@@ -13,9 +13,12 @@ export function useNavbar() {
   const [displayedNavbar, setDisplayedNavbar] = useState<JSX.Element>(
     <SideNavbarDesktop />
   );
+  const [isNarrow, setIsNarrow] = useState<boolean>(true);
 
   const displayNavbarDependingWidth = (width: number): void => {
+    console.log("on function", isNarrow);
     if (width <= 760) return setDisplayedNavbar(<SideNavbarSmall />);
+    else if (isNarrow) return setDisplayedNavbar(<SideNavbarNarrow />);
     return setDisplayedNavbar(<SideNavbarDesktop />);
   };
 
@@ -30,11 +33,13 @@ export function useNavbar() {
     );
     return setNavbarNavigationElements(updatedNavigationElements);
   };
-
+  console.log(isNarrow);
   return {
     navbarDependingWidth: (width: number) => displayNavbarDependingWidth(width),
     displayedNavbar,
     navbarNavigationElements,
     setCurrentNavigationElement,
+    setIsNarrow,
+    isNarrow,
   };
 }
