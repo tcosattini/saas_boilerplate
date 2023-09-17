@@ -21,7 +21,7 @@ export default function SideNavbarSmall() {
       <Transition.Root show={sidebarOpen} as={Fragment}>
         <Dialog
           as="div"
-          className="relative z-40 md:hidden"
+          className="relative z-40"
           onClose={() => setSidebarOpen(false)}
         >
           <Transition.Child
