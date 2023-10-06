@@ -1,5 +1,7 @@
 import { Dialog } from "@headlessui/react";
-import { useState, Fragment } from "react";
+import { useState } from "react";
+import { profileMenuElements } from "./data/profileMenuElements.example";
+import { IProfileMenuElement } from "../../shared/interfaces/navigation/profileMenu.interface";
 
 export default function ProfileDropdown() {
   const [isDropDownOpen, setIsDropDownOpen] = useState<boolean>(false);
@@ -32,30 +34,19 @@ export default function ProfileDropdown() {
           className="absolute right-4 top-12 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
           role="menu"
         >
-          <a
-            href="#"
-            className="block px-4 py-2 text-sm text-gray-700"
-            role="menuitem"
-            id="user-menu-item-0"
-          >
-            Your Profile
-          </a>
-          <a
-            href="#"
-            className="block px-4 py-2 text-sm text-gray-700"
-            role="menuitem"
-            id="user-menu-item-1"
-          >
-            Settings
-          </a>
-          <a
-            href="#"
-            className="block px-4 py-2 text-sm text-gray-700"
-            role="menuitem"
-            id="user-menu-item-2"
-          >
-            Sign out
-          </a>
+          {profileMenuElements.map(
+            (profileMenuElement: IProfileMenuElement) => (
+              <a
+                className="block px-4 py-2 text-sm text-gray-700"
+                role="menuitem"
+                id={`user-menu-item-2${profileMenuElement.id}`}
+                href={profileMenuElement.href}
+                key={profileMenuElement.id}
+              >
+                {profileMenuElement.title}
+              </a>
+            )
+          )}
         </Dialog.Panel>
       </Dialog>
     </>
