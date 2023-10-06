@@ -10,10 +10,10 @@ export default function SideNavbarNarrow() {
   const { setCurrentNavigationElement, navbarNavigationElements, setIsNarrow } =
     useContext(NavbarContext);
   return (
-    <div className="fixed inset-y-0 flex w-64 flex-col">
+    <div className="h-screen inset-y-0 flex flex-col">
       <a
         href="#"
-        className="flex h-24 w-20 items-center justify-center bg-light-primary focus:outline-none"
+        className="flex h-16 w-20 items-center justify-center bg-light-primary focus:outline-none"
       >
         <img
           className="h-8 w-auto"
