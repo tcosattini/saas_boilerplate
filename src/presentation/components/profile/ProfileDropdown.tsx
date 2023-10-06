@@ -11,22 +11,22 @@ export default function ProfileDropdown() {
 
   return (
     <>
-      <div>
+      <div className="flex items-center w-full">
+        <img
+          className="h-8 w-8 rounded-full"
+          src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+          alt=""
+        />
         <button
           type="button"
-          className="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+          className="relative flex rounded-full text-sm"
           id="user-menu-button"
           aria-expanded="false"
           aria-haspopup="true"
           onClick={handleClick}
         >
           <span className="absolute -inset-1.5"></span>
-          <span className="sr-only">Open user menu</span>
-          <img
-            className="h-8 w-8 rounded-full"
-            src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-            alt=""
-          />
+          <span className="ml-2">Demo user</span>
         </button>
       </div>
       <Dialog open={isDropDownOpen} onClose={() => setIsDropDownOpen(false)}>
