@@ -8,7 +8,7 @@ import {
 } from "@heroicons/react/24/outline";
 
 export const navigationElementsExample = [
-  { id: 1, name: "Dashboard", href: "#", icon: HomeIcon, current: true },
+  { id: 1, name: "Dashboard", href: "example", icon: HomeIcon, current: true },
   { id: 2, name: "Team", href: "#", icon: UsersIcon, current: false },
   { id: 3, name: "Projects", href: "#", icon: FolderIcon, current: false },
   { id: 4, name: "Calendar", href: "#", icon: CalendarIcon, current: false },
