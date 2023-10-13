@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { NavbarNavigationElement } from "../../../../shared/interfaces/navigation/navbar.interface";
 import { NavbarContext } from "../../../../contexts/navigation/navbar/NavbarContext";
-import { ChevronDoubleLeftButton } from "../../../button/special-button/ChevronDoubleLeftButton";
+import { ChevronDoubleLeftButton } from "../../../buttons/special-button/ChevronDoubleLeftButton";
 
 function classNames(...classes: any) {
   return classes.filter(Boolean).join(" ");
