@@ -6,6 +6,9 @@ export default {
       colors: {
         light: { primary: "#3b82f6", selected: "#2563eb", hover: "#2563eb" },
       },
+      fontFamily: {
+        h1: ["Source Serif Pro"],
+      },
     },
     patterns: {
       opacities: {
