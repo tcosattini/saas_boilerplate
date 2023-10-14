@@ -1,4 +1,3 @@
-
 import DashboardWrapper from "../dashboard-wrapper/DashboardWrapper";
 
 export default function ExamplePage() {
