@@ -1,8 +1,10 @@
 import { IProfileMenuElement } from "../../shared/interfaces/navigation/profileMenu.interface";
 
-export default function ProfileMenuElement({
-  profileMenuElement,
-}: IProfileMenuElement) {
+type Props = {
+  profileMenuElement: IProfileMenuElement;
+};
+
+export default function ProfileMenuElement({ profileMenuElement }: Props) {
   return (
     <a
       className="block px-4 py-2 text-sm text-gray-700"
