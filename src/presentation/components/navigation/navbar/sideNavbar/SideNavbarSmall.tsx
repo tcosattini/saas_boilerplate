@@ -1,5 +1,5 @@
 import { Fragment, useContext, useState } from "react";
-import { BarsBottomButton } from "../../../button/special-button/BarsBottomButton";
+import { BarsBottomButton } from "../../../buttons/special-button/BarsBottomButton";
 import { NavbarContext } from "../../../../contexts/navigation/navbar/NavbarContext";
 
 //Tailwind dependencies

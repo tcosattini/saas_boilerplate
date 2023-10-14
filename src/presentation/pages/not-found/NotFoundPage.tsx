@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import MediumButton from "../../components/button/normal-button/primary/MediumButton";
+import MediumButton from "../../components/buttons/normal-button/primary/MediumButton";
 
 export default function NotFoundPage() {
   return (

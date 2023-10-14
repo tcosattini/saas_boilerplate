@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { NavbarContext } from "../../../../contexts/navigation/navbar/NavbarContext";
-import { ChevronDoubleRightButton } from "../../../button/special-button/ChevronDoubleRightButton";
+import { ChevronDoubleRightButton } from "../../../buttons/special-button/ChevronDoubleRightButton";
 
 export default function SideNavbarNarrow() {
   // TODO CHANGE THIS SHIT

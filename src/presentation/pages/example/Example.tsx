@@ -1,16 +1,10 @@
-export default function Example() {
+import SimpleTable from "../../components/lists/tables/simple-table/SimpleTable";
+import DashboardWrapper from "../dashboard-wrapper/DashboardWrapper";
+
+export default function ExamplePage() {
   return (
-    <div className="py-8">
-      <div className="mx-auto max-w-7xl px-4 md:px-8">
-        <div className="py-1">
-          <div className="h-screen rounded-lg border-4 border border-gray-200">
-            <div
-              className="h-full w-full pattern-diagonal-lines pattern-blue-500 pattern-bg-white 
-  pattern-size-2 pattern-opacity-20"
-            ></div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <DashboardWrapper>
+      <SimpleTable />
+    </DashboardWrapper>
   );
 }

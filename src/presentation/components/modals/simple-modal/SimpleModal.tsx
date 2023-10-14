@@ -1,7 +1,7 @@
 import { Dialog, Transition } from "@headlessui/react";
 import { Imodal } from "./interface/modal.interface";
 
-export default function Modal({
+export default function SimpleModal({
   title,
   content,
   isClosable,
