@@ -8,8 +8,11 @@ function classNames(...classes: any) {
 }
 
 export default function SideNavbarDesktop() {
-  const { setCurrentNavigationElement, navbarNavigationElements, setIsNarrow } =
-    useContext(NavbarContext);
+  const {
+    setCurrentNavigationElement,
+    navbarNavigationElements,
+    changeDesktopNavbarSize,
+  } = useContext(NavbarContext);
 
   return (
     <>
@@ -52,7 +55,9 @@ export default function SideNavbarDesktop() {
             </nav>
           </div>
           <div className="flex flex-shrink-0 pb-2 justify-end">
-            <ChevronDoubleLeftButton onClick={() => setIsNarrow(true)} />
+            <ChevronDoubleLeftButton
+              onClick={() => changeDesktopNavbarSize()}
+            />
           </div>
         </div>
       </div>

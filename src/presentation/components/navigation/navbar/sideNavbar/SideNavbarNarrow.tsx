@@ -7,8 +7,11 @@ export default function SideNavbarNarrow() {
   function classNames(...classes: any) {
     return classes.filter(Boolean).join(" ");
   }
-  const { setCurrentNavigationElement, navbarNavigationElements, setIsNarrow } =
-    useContext(NavbarContext);
+  const {
+    setCurrentNavigationElement,
+    navbarNavigationElements,
+    changeDesktopNavbarSize,
+  } = useContext(NavbarContext);
   return (
     <div className="h-screen sticky inset-y-0 flex flex-col">
       <a
@@ -45,7 +48,7 @@ export default function SideNavbarNarrow() {
           ))}
         </div>
         <div className="flex h-full pb-2  items-end justify-center">
-          <ChevronDoubleRightButton onClick={() => setIsNarrow(false)} />
+          <ChevronDoubleRightButton onClick={() => changeDesktopNavbarSize()} />
         </div>
       </nav>
     </div>

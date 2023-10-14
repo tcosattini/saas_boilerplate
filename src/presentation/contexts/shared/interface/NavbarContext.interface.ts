@@ -7,4 +7,5 @@ export interface NavbarContext {
   isNarrow: boolean;
   displayedNavbar: JSX.Element;
   navbarDependingWidth: (width: number) => void;
+  changeDesktopNavbarSize: () => void;
 }
