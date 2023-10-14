@@ -13,7 +13,20 @@ export function useNavbar() {
   const [displayedNavbar, setDisplayedNavbar] = useState<JSX.Element>(
     <SideNavbarDesktop />
   );
-  const [isNarrow, setIsNarrow] = useState<boolean>(true);
+
+  const isNavbarNarrowLocalStorage: boolean =
+    localStorage.getItem("isNavbarNarrow") === "true" ? true : false;
+
+  const [isNarrow, setIsNarrow] = useState<boolean>(isNavbarNarrowLocalStorage);
+
+  const changeDesktopNavbarSize = () => {
+    if (isNarrow)
+      return (
+        setIsNarrow(false), localStorage.setItem("isNavbarNarrow", "false")
+      );
+
+    return setIsNarrow(true), localStorage.setItem("isNavbarNarrow", "true");
+  };
 
   const displayNavbarDependingWidth = (width: number): void => {
     if (width <= 760) return setDisplayedNavbar(<SideNavbarSmall />);
@@ -38,6 +51,7 @@ export function useNavbar() {
     navbarNavigationElements,
     setCurrentNavigationElement,
     setIsNarrow,
+    changeDesktopNavbarSize,
     isNarrow,
   };
 }

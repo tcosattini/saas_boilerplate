@@ -15,6 +15,7 @@ const initialContext = {
   isNarrow: true,
   displayedNavbar: <SideNavbarNarrow />,
   navbarDependingWidth: () => {},
+  changeDesktopNavbarSize: () => {},
 };
 
 export const NavbarContext =
@@ -30,6 +31,7 @@ export const NavbarContextProvider = ({
     displayedNavbar,
     isNarrow,
     navbarDependingWidth,
+    changeDesktopNavbarSize,
   } = useNavbar();
 
   return (
@@ -41,6 +43,7 @@ export const NavbarContextProvider = ({
         isNarrow,
         displayedNavbar,
         navbarDependingWidth,
+        changeDesktopNavbarSize,
       }}
     >
       {children}
